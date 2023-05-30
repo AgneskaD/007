@@ -1,5 +1,5 @@
 export const convertPLNToUSD = (PLN) => {
-    if (typeof PLN === "string") {
+    if (!PLN || typeof PLN === "string") {
       return NaN;
     }
   

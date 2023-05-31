@@ -5,24 +5,25 @@ import Button from "./../Button/Button";
 import styles from "./CurrencyForm.module.scss";
 
 const CurrencyForm = ({ action }) => {
-    const [amount, setAmount] = useState("");
-    const [from, setFrom] = useState("PLN");
-    const [to, setTo] = useState("PLN");
+  const [amount, setAmount] = useState("");
+  const [from, setFrom] = useState("PLN");
+  const [to, setTo] = useState("PLN");
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        action({
-            amount: parseInt(amount),
-            from,
-            to,
-          });
-    };
+  const handleSubmit = (e) => {
+    e.preventDefault();
 
-    return (
-        <form onSubmit={handleSubmit} className={styles.form}>
-          <label>
-            <span>Amount:</span>
-            <TextInput
+    action({
+      amount: parseInt(amount),
+      from,
+      to,
+    });
+  };
+
+  return (
+    <form onSubmit={handleSubmit} className={styles.form}>
+      <label>
+        <span>Amount:</span>
+        <TextInput
           data-testid="amountValue"
           type="number"
           value={amount}
@@ -48,9 +49,10 @@ const CurrencyForm = ({ action }) => {
           <option value="PLN">PLN</option>
           <option value="USD">USD</option>
         </Select>
-        </label>
+      </label>
       <Button>Convert</Button>
     </form>
   );
 };
+
 export default CurrencyForm;

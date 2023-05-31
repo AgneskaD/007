@@ -77,10 +77,10 @@ describe("Component ResultBox", () => {
   });
   it("Should render text when Amount is less than zero", () => {
     const testParams = [
-        { testFrom: "USD", testTo: "PLN", testAmount: -1 },
-        { testFrom: "PLN", testTo: "USD", testAmount: -12 },
-        { testFrom: "PLN", testTo: "PLN", testAmount: -123 },
-        { testFrom: "USD", testTo: "USD", testAmount: -304 },
+      { testFrom: "USD", testTo: "PLN", testAmount: -1 },
+      { testFrom: "PLN", testTo: "USD", testAmount: -12 },
+      { testFrom: "PLN", testTo: "PLN", testAmount: -123 },
+      { testFrom: "USD", testTo: "USD", testAmount: -304 },
     ];
 
     for (let { testFrom, testTo, testAmount } of testParams) {
